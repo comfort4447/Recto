@@ -1,0 +1,534 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 1000px;
+}
+button:hover {
+  background-color: rgb(2, 173, 2);
+  color: #fff;
+}
+.middle-side a:hover {
+  background-color: rgb(2, 173, 2);
+  color: #fff;
+}
+.links a:hover {
+  color: #fff;
+}
+.Navbar {
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  height: 80px;
+  width: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  justify-content: space-between;
+  padding: 20px 40px 20px 40px;
+}
+.utensils {
+  color: rgb(2, 173, 2);
+}
+.left-side {
+  display: flex;
+}
+.links {
+  display: none;
+}
+.links a{
+  font-size: 30px;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+.middle-side button {
+  display: flex;
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+.middle-side #hidden {
+  position: absolute;
+  left: 0px;
+  top: 80px;
+  height: 80vh;
+  width: 100%;
+  background-color: #010145;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.right-side {
+  display: none;
+}
+
+/** SLIDER PAGE **/
+
+.slider {
+  padding: 100px 0px 0px 0px;
+  width: 100%;
+  display: block;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.slide-content {
+  display: block;
+  padding: 20px 0px 20px 0px;
+  margin: auto;
+}
+.H-img {
+  text-align: center;
+}
+.hd-img {
+  width: 50%;
+  text-align: center;
+}
+.p-1 {
+  font-size: 25px;
+  color: rgb(2, 173, 2);
+}
+.slide-content h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.slide-content p {
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+.btnSlider {
+  text-align: center;
+}
+.center-btn {
+  background-color: #010145;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/** DISHES **/
+
+.dishes {
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+.overflow {
+  overflow-x: scroll;
+  height: 900px;
+}
+.cards {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(225px, 1fr));
+  grid-gap: 40px;
+  margin-top: 15px;
+  align-items: center;
+  margin: auto;
+}
+.card {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.dishes-title p {
+  color: rgb(2, 173, 2);
+  font-size: 18px;
+  text-align: center;
+}
+.dishes-title h1 {
+  color: #010145;
+  font-size: 30px;
+  text-align: center;
+}
+.img {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #010145;
+}
+.card-img {
+  width: 50%;
+  height: 200px;
+}
+.card-description {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card-description p {
+  color: rgb(2, 173, 2);
+}
+.card-btn {
+    background-color: #010145;
+    text-decoration: none;
+    padding: 2px 26px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/** ABOUT **/
+
+.AboutUs {
+  align-items: center;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 100px;
+}
+.about-title p, h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-title h1 {
+  text-align: center;
+}
+.about-title h1 {
+  font-size: 25px;
+}
+.about-us p, h1{
+  text-align: center;
+}
+.about-us p {
+  text-align: center;
+}
+.about {
+  display: block;
+  margin: auto;
+}
+.img1 {
+  text-align: center;
+}
+.about-img {
+  width: 100%;
+}
+.delivery{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.sub{
+  background-color: rgb(230, 230, 233);
+  text-decoration: none;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(48, 48, 168);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/** MENU **/
+.menu {
+  align-items: center;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 100px;
+}
+.cards-menu {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(225px, 1fr));
+  grid-gap: 40px;
+  margin-top: 15px;
+}
+.Menu {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.img2 {
+  display: block;
+  text-align: center;
+  color: #010145;
+}
+
+.menu-img {
+  width: 50%;
+  padding: 20px 20px 20px 20px;
+}
+
+/** REVIEW **/
+
+.reviews {
+  align-items: center;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 100px;
+}
+.overflow1 {
+  overflow-x: scroll;
+  height: 900px;
+}
+.REVIEW-title p, h1 {
+  text-align: center;
+}
+.REVIEW-title p {
+  color: rgb(2, 173, 2);
+  font-size: 18px;
+}
+.REVIEW-title h1 {
+  color: #010145;
+  font-size: 30px;
+  font-weight: bold;
+}
+.review {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(225px, 1fr));
+  grid-gap: 40px;
+  margin-top: 15px;
+}
+.review-card {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.card-review {
+  padding: 20px 20px 20px 20px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.card-review .rev-img {
+  width: 20%;
+  border-radius: 100%;
+}
+.review-de {
+  margin: auto;
+  padding: 0px 20px 20px 20px;
+}
+.review-de p {
+  text-align: left;
+}
+
+/** FOOTER **/
+
+.grid-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.grid-container h1{
+  margin-bottom: 20px;
+  color: #010145;
+  font-size: 20px;
+}
+.grid-container p{
+  font-size: 12px;
+}
+.quick1 a {
+  display: block;
+}
+.quick1 a {
+  color: #000;
+  text-decoration: none;
+}
+.copy p {
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: #010145;
+}
+.copy span {
+  color: rgb(2, 173, 2);
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  button:hover {
+    background-color: rgb(2, 173, 2);
+    color: #fff;
+  }
+  .Navbar {
+    width: 100%;
+    padding: 20px 90px 20px 110px;
+  }
+  .utensils {
+    color: rgb(2, 173, 2);
+  }
+  .right-side{
+    display: flex;
+    justify-content: space-evenly;
+    flex: 50%;
+    align-items: center;
+    color: #00008B;
+    font-size: 15px;
+    justify-content: right;
+  }
+  .right-side a{
+    padding: 10px;
+    cursor: pointer;
+  }
+  .links {
+    display: unset;
+  }
+  .links a {
+    text-decoration: none;
+    color: #808080;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .middle-side {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .middle-side button {
+    display: none;
+  }
+  .middle-side #hidden {
+    display: flex;
+    background-color: #fff;
+  }
+  .left-side {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .left-side h2{
+    color: #010145;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .slidecontent {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .hd-img {
+    width: 100%;
+  }
+  .p-1 {
+    font-size: 20px;
+  }
+  .slide-content h1 {
+    font-size: 30px;
+    text-align: left;
+  }
+  .slide-content p {
+    font-size: 12px;
+    text-align: left;
+  }
+  .btnSlider {
+    text-align: left;
+  }
+  .cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-gap: 40px;
+    margin-top: 15px;
+  }
+  .overflow {
+    overflow-y: scroll;
+    height: 500px;
+  }
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .about-us p {
+    text-align: left;
+    font-size: 10px;
+    width: 250px;
+  }
+  .about-us h1{
+    text-align: left;
+    font-size: 20px;
+  }
+ 
+  .cards-menu {
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  }
+  .img2 .menu-img {
+    height: 200px;
+  }
+  .img2 p {
+    font-size: 12px;
+    padding: 0px 20px 20px 20px;
+  }
+  .img2 h1 {
+    font-size: 25px;
+  }
+  .review {
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  }
+  .card-review {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-review h1 {
+    font-size: 25px;
+  }
+  .review-de p {
+    font-size: 12px;
+  }
+  .menu-img {
+    width: 100%;
+  }
+  .card-img {
+    width: 100%;
+    text-align: left;
+  }
+  .about-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .Navbar {
+    padding: 20px 90px 20px 110px;
+  }
+  .hd-img {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-img {
+    width: 100%;
+  }
+  .card-img {
+    width: 100%;
+  }
+  .links a {
+    padding: 30px;
+  }
+  .about-img {
+    width: 700px;
+  }
+  .about-us p {
+    text-align: left;
+    font-size: 15px;
+    width: 400px;
+  }
+  .about-us h1{
+    text-align: left;
+    font-size: 30px;
+  }
+  .review-de p {
+    font-size: 12px;
+  }
+  .img1 {
+    text-align: left;
+  }
+}
+
