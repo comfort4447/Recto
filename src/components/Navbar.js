@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils, faSearch, faCartShopping, faHeart, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faSearch, faCartShopping, faHeart, faBars, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import { home } from '../Helpers/CarouselData';
 import { CardData } from '../Helpers/CardData';
@@ -48,16 +48,16 @@ function Navbar() {
             
             <div className='Navbar'>
                 <div className='left-side'>
-                    <h2><FontAwesomeIcon className='utensils' icon={faUtensils}/></h2>
-                    <h2>RECTO</h2>
+                    <h2><a href='#slider'><FontAwesomeIcon className='utensils' icon={faUtensils}/></a></h2>
+                    <h2><a href='#slider'>RECTO</a></h2>
                 </div>
                 <div className='middle-side'>
                     <div className='links' id={showLinks ? "hidden" : ""}>
-                        <a href='/Home'>Home</a>
-                        <a href='/Dishes'>Dishes</a>
-                        <a href='/About'>About</a>
-                        <a href='/Menu'>Menu</a>
-                        <a href='/Review'>Review</a>
+                        <a href='#slider'>Home</a>
+                        <a href='#dishes'>Dishes</a>
+                        <a href='#About'>About</a>
+                        <a href='#menu'>Menu</a>
+                        <a href='#review'>Review</a>
                     </div>
                     <button onClick={() => setShowLinks (!showLinks)}>
                         <FontAwesomeIcon size='2x' icon={faBars}/></button>
@@ -69,13 +69,15 @@ function Navbar() {
                 </div>
             </div>
         <div className='container'>
-            <div className='slider'> 
-        
+            <div className='slider' id='slider'> 
+            <h2><FontAwesomeIcon className='arrow' icon={faAngleRight} onClick={nextSlide}/></h2>
             {home.map((slide, index) => {
                 return (
                     <div className={index === currImg ? "slide current" : "slide"} key={index}>
                         {index === currImg && (
+                            
                                 <div className='slidecontent'>
+                                    
                                     <div className='H-img'>
                                         <img className='hd-img' src={slide.img} alt="" />
                                     </div>
@@ -92,8 +94,9 @@ function Navbar() {
                     </div>
                 )
             })}
+            <h2><FontAwesomeIcon className='arrow' icon={faAngleLeft} onClick={prevSlide}/></h2>
         </div>
-    <div className='center'> 
+    <div className='center' id='dishes'> 
             <div className='dishes'>
                 <div className='dishes-title'>
                     <p>Our Dishes</p>
@@ -104,6 +107,9 @@ function Navbar() {
                     {CardData.map(post => {
                         return(
                             <div className='card'>
+                                <div data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <div className='img'>
                                     <img src={`../images/${post.img1}`} className='card-img' />
                                     <p className='card-title'>{post.dishes}</p>
@@ -111,6 +117,7 @@ function Navbar() {
                                 <div className='card-description'>
                                     <p className='card-price'>{post.price}</p>
                                     <button className='card-btn'>{post.btn}</button>
+                                </div>
                                 </div>
                             </div>
                         )
@@ -120,7 +127,7 @@ function Navbar() {
             </div>
             </div>
 
-            <div className='AboutUs'>
+            <div className='AboutUs' id='About'>
                 <div className='about-title'>
                     <p>About Us</p>
                     <h1>WHY CHOOSE US?</h1>
@@ -130,11 +137,21 @@ function Navbar() {
                     return (
                         <div className='about'>
                             <div className='img1'>
+                            <div data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-duration="500">
                                 <img className='about-img' src={`../Images/${item.img}`}/>
                             </div>
+                            </div>
                             <div className='about-us'>
+                            <div data-aos="fade-left"
+                            data-aos-anchor="#example-anchor"
+                            data-aos-offset="500"
+                            data-aos-duration="500">
                                 <h1>{item.header}</h1>
                                 <p>{item.details}</p>
+                                </div>
                             </div>
                         </div>
                     )
@@ -142,7 +159,7 @@ function Navbar() {
                 </div>
             </div>
 
-        <div className='menu'>
+        <div className='menu' id='menu'>
             <div className='dishes-title'>
                 <p>Our Menu</p>
                 <h1>TODAY'S SPECIALITY</h1>
@@ -152,6 +169,9 @@ function Navbar() {
                     {MenuData.map(posts => {
                         return(
                             <div className='Menu'>
+                                <div data-aos="flip-left"
+                                    data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="2000">
                                 <div className='img2'>
                                     <img src={`../images/${posts.img1}`} className='menu-img' />
                                     <h1 className='card-title'>{posts.dishes}</h1>
@@ -161,6 +181,7 @@ function Navbar() {
                                     <button className='card-btn'>{posts.btn}</button>
                                     <p className='card-price'>{posts.price}</p>
                                 </div>
+                                </div>
                             </div>
                         )
                     })}
@@ -169,7 +190,7 @@ function Navbar() {
         </div>
 
 
-        <div className='reviews'>
+        <div className='reviews' id='review'>
                 <div className='REVIEW-title'>
                     <p>Customer's Review</p>
                     <h1>WHAT THEY SAY</h1>
@@ -197,7 +218,7 @@ function Navbar() {
             </div>
 
     
-    <footer className='grid-container'>
+        <footer className='grid-container'>
         <div className='location'>
             <h1>Locations</h1>
             <p>India</p>
@@ -231,11 +252,11 @@ function Navbar() {
             <p>LinkedIn</p>
         </div>
         
-    </footer>
+        </footer>
         <div className='copy'>
             <p>Copyright @ 2021 By <span>Tayo Comfort</span></p>
         </div>
-        </div>
+    </div>
 </>
         
     )
